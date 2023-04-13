@@ -60,13 +60,6 @@ function game(){
         console.log("Your opponent picked: " + computerSelection);
         console.log(playRound(playerSelection, computerSelection));
     }
-    // for(i = 0; i < 5; i++){
-    //     playerSelection = prompt("What's your move?");
-    //     computerSelection = getComputerChoice();
-    //     console.log("You picked: " + playerSelection);
-    //     console.log("Your opponent picked: " + computerSelection);
-    //     console.log(playRound(playerSelection, computerSelection));
-    // }
     if(playerWinCount > computerWinCount){
         console.log("You won " + playerWinCount + " out of 5 Rounds. Congratulations. Reload for a new game.");
     } else {
