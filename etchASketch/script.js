@@ -24,6 +24,12 @@ function createGrid(numGrids) {
     }
 }
 
+function clearCanvas() {
+    document.querySelectorAll('.grid').forEach(element => {
+        element.style.backgroundColor = 'lightgray';
+    })
+}
+
 function sketch() {
     document.querySelectorAll('.grid').forEach(element => {
         element.addEventListener('dragover', (event) => {
@@ -39,7 +45,7 @@ slider.addEventListener('input', function() {
     createGrid(value);
     sketch();
 });
-// initialize canva
+// initialize canvas
 slider.value = 10;
 createGrid(16);
 sketch();
