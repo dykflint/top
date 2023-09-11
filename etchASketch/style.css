@@ -1,0 +1,18 @@
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px; /* Set the desired width for the entire grid */
+    height: 800px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    /* padding: 10px; */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+.grid:hover {
+    background-color: yellow;
+}
