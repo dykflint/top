@@ -45,6 +45,7 @@
 .rock:focus, .paper:focus, .scissors:focus {
     background-color: green;
     /* Add some comment */
+    /* Add another comment */
 }
 img {
     width: 70%;
