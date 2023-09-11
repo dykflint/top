@@ -30,11 +30,34 @@ function clearCanvas() {
     })
 }
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function sketch() {
     document.querySelectorAll('.grid').forEach(element => {
+        let eventCounter = 0;
         element.addEventListener('dragover', (event) => {
+            eventCounter += 0.1;
+            if (eventCounter >= 1.0) eventCounter = 1.0;
+            console.log(eventCounter);
             event.preventDefault();
-            element.style.backgroundColor = 'red';
+            let red = getRandomInt(1,255);
+            let green = getRandomInt(1,255);
+            let blue = getRandomInt(1,255);
+            element.style.backgroundColor = `rgb(${red - eventCounter*red}, ${green - eventCounter*green}, ${blue - eventCounter*blue})`;
+        });
+        element.addEventListener('click', (event) => {
+            eventCounter += 0.1;
+            if (eventCounter >= 1.0) eventCounter = 1.0;
+            console.log(eventCounter);
+            event.preventDefault();
+            let red = getRandomInt(1,255);
+            let green = getRandomInt(1,255);
+            let blue = getRandomInt(1,255);
+            element.style.backgroundColor = `rgb(${red - eventCounter*red}, ${green - eventCounter*green}, ${blue - eventCounter*blue})`;
         });
     });
 }
