@@ -43,7 +43,8 @@
     background-color: rgb(222, 137, 151);
 }
 .rock:focus, .paper:focus, .scissors:focus {
-    background-color: rgb(222, 137, 151);
+    /* background-color: rgb(222, 137, 151); */
+    background-color: lightblue;
 }
 img {
     width: 70%;
