@@ -4,32 +4,49 @@
   justify-content: space-around;
   align-items: center;
   width: 300px;
-  height: 400px;
-  background-color: grey;
+  height: 500px;
+  background-color: #98A8AC;
+  border-radius: 15px;
+  border: 2px solid grey;
+  font-family: Fira Code;
+  font-weight: bold;
+  margin: auto;
+  padding: 15px;
 }
 #result {
-  height: 30px;
-  width: 280px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 60px;
+  width: 240px;
   background-color: white;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 30px;
+  border-radius: 15px;
+  border: 5px solid grey;
+  overflow: hidden;
 }
 
 #bottom {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 10px;
 }
 
 #numbers {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
 #numbers > div {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
 }
 .row > div {
   display: flex;
@@ -39,6 +56,9 @@
   height: 50px;
   background-color: white;
   cursor: pointer;
+  border-radius: 5px;
+  border: 5px solid grey;
+  font-size: 25px;
 }
 #clear, #dot {
   display: flex;
@@ -48,14 +68,20 @@
   height: 50px;
   background-color: white;
   cursor: pointer;
+  border-radius: 5px;
+  border: 5px solid grey;
+  font-size: 25px;
 }
-#numbers > div > div:hover {
-  background-color: pink;
+#clear:hover, #dot:hover {
+  background-color: #DEDEDE;
+}
+.row > div:hover {
+  background-color: #DEDEDE;
 }
 #operators {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 #operators > div {
   display: flex;
@@ -65,11 +91,15 @@
   height: 50px; 
   background-color: white;
   cursor: pointer;
+  border-radius: 5px;
+  border: 5px solid grey;
+  font-size: 25px;
 }
 #operators > div:hover {
-  background-color: pink;
+  background-color: #DEDEDE;
 }
 
 .activeOperator {
-  background-color: lightblue !important;
+  background-color: #9AAB93 !important;
+  color: white;
 }

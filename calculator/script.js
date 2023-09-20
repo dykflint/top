@@ -12,6 +12,7 @@ allNumRows.forEach(parElem => {
   let rowNums = parElem.querySelectorAll('div');
   rowNums.forEach(numButton => {
     numButton.addEventListener('click', () => {
+      if(resultDiv.textContent == '0' || resultDiv.textContent == 'NaN') resultDiv.textContent = '';
       showNumber(numButton.textContent);
     })
   })
@@ -42,7 +43,7 @@ operators.forEach(operator => {
 
 function calculate() {
   equal.classList.remove('activeOperator');
-  resultDiv.textContent = eval(resultDiv.textContent);
+  resultDiv.textContent = eval(resultDiv.textContent).toFixed(3);
 }
 
 function addDot() {
@@ -55,5 +56,5 @@ function clearLog() {
   operators.forEach(operator => {
     operator.classList.remove('activeOperator');
   })
-  resultDiv.textContent = '';
+  resultDiv.textContent = '0';
 }
