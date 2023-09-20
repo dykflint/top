@@ -47,6 +47,7 @@
   width: 50px;
   height: 50px;
   background-color: white;
+  cursor: pointer;
 }
 #numbers > div > div:hover {
   background-color: pink;
@@ -68,6 +69,7 @@
 #operators > div:hover {
   background-color: pink;
 }
+
 .activeOperator {
   background-color: lightblue !important;
 }
