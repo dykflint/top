@@ -1,0 +1,133 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, button, input {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: #666;
+}
+button, input {
+    font-size: 100%;
+    margin: 0;
+    max-width: 100%;
+    vertical-align: baseline;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+
+}
+#imgheader {
+    flex: 1 1 0;
+}
+img {
+    width: 100%;
+}
+#sucolumn {
+    flex: 2 1 0;
+}
+
+/* Put copyright text at the bottom of the image */
+#imgheader {
+    position: relative;
+}
+#textoverimage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    bottom: 50%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 3rem;
+}
+
+/* form settings */
+input,
+input:focus {
+    outline: 0;
+}
+input:focus::placeholder {
+    color: transparent;
+}
+input {
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    padding: 24px 10px 12px;
+    font-size: 15px;
+    font-size: 1rem;
+}
+form div[id^="su"] {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Label Styles */
+#suform label {
+    padding: 5px 5px;
+    display: none;
+    position: absolute;
+    /* top: 15px;
+    left: 26px; */
+    color: #8BC34A;
+    font-size: 14px;
+    -webkit-animation: silo-fade 0.2s;
+    -moz-animation: silo-fade 0.2s;
+    animation: silo-fade 0.2s;
+    max-width: 80%;
+}
+#suform input:focus + label, 
+#suform input[required]:valid + label,
+#suform input:not(:placeholder-shown) + label {
+    display: block;
+}
+
+
+
+
+/* Animations */
+@-webkit-keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+@-moz-keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+@keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1.4em);
+        -moz-transform: translateY(-1.4em);
+        -ms-transform: translateY(-1.4em);
+        -o-transform: translateY(-1.4em);
+        transform: translateY(-1.4em);
+    }   
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
