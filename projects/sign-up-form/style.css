@@ -1,133 +1,232 @@
+/* Pre-defines some common settings */
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-html, button, input {
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
-    color: #666;
+html,
+button,
+input {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #666;
 }
-button, input {
-    font-size: 100%;
-    margin: 0;
-    max-width: 100%;
-    vertical-align: baseline;
+button,
+input {
+  font-size: 100%;
+  margin: 0;
+  max-width: 100%;
+  vertical-align: baseline;
 }
-
+h1 {
+  color: black;
+  text-align: center;
+}
 #container {
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
+  background-color: #FFC927;
 }
 #imgheader {
-    flex: 1 1 0;
+  flex: 1 1 0;
 }
 img {
-    width: 100%;
+  width: 100%;
 }
 #sucolumn {
-    flex: 2 1 0;
+  flex: 2 1 0;
 }
 
 /* Put copyright text at the bottom of the image */
 #imgheader {
-    position: relative;
+  position: relative;
+  background-color: #FFC927;
 }
 #textoverimage {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 25%;
-    position: absolute;
-    bottom: 50%;
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 3rem;
 }
 
 /* form settings */
 input,
 input:focus {
-    outline: 0;
+  outline: 0;
 }
 input:focus::placeholder {
-    color: transparent;
+  color: transparent;
 }
-input {
-    background-color: #fff;
-    border: 1px solid #d8d8d8;
-    padding: 24px 10px 12px;
-    font-size: 15px;
-    font-size: 1rem;
+input,
+input:valid {
+  background-color: #fff;
+  border: 1px solid #d8d8d8;
+  padding: 24px 10px 12px;
+  font-size: 15px;
+  font-size: 1rem;
+}
+#suform {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 form div[id^="su"] {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-
-
+input {
+  border: 2px solid red;
+}
 
 /* Label Styles */
 #suform label {
-    padding: 5px 5px;
-    display: none;
-    position: absolute;
-    /* top: 15px;
+  padding: 5px 5px;
+  display: none;
+  position: absolute;
+  /* top: 15px;
     left: 26px; */
-    color: #8BC34A;
-    font-size: 14px;
-    -webkit-animation: silo-fade 0.2s;
-    -moz-animation: silo-fade 0.2s;
-    animation: silo-fade 0.2s;
-    max-width: 80%;
+  color: #666;
+  font-size: 14px;
+  -webkit-animation: silo-fade 0.2s;
+  -moz-animation: silo-fade 0.2s;
+  animation: silo-fade 0.2s;
+  max-width: 80%;
 }
-#suform input:focus + label, 
+
+#suform input:focus + label,
 #suform input[required]:valid + label,
 #suform input:not(:placeholder-shown) + label {
-    display: block;
+  display: block;
+}
+/* Button styling */
+#su-confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#su-confirm button,
+#su-confirm button:hover {
+  width: max-content;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;  
+  background-color: #5ab173;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-
-
-
+#firstandlast, #contactinfo, #passwordconfirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* put source at the bottom center */
+#imgheader > p {
+  position: absolute;
+  bottom: 0;
+  padding: 0 25%;
+}
 /* Animations */
 @-webkit-keyframes silo-fade {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(-1.4em);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1.4em);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
 }
 @-moz-keyframes silo-fade {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(-1.4em);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1.4em);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
 }
 @keyframes silo-fade {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(-1.4em);
-        -moz-transform: translateY(-1.4em);
-        -ms-transform: translateY(-1.4em);
-        -o-transform: translateY(-1.4em);
-        transform: translateY(-1.4em);
-    }   
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1.4em);
+    -moz-transform: translateY(-1.4em);
+    -ms-transform: translateY(-1.4em);
+    -o-transform: translateY(-1.4em);
+    transform: translateY(-1.4em);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 100vh;
+  }
+  #sucolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100% !important;
+  }
+  #imgheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFC927;
+    width: 20%;
+  }
+  /* put source at the bottom center */
+  #imgheader > p {
+    position: absolute;
+    bottom: 0;
+    padding: 0 15%;
+  }
+  img {
+    /* height: 100vh; */
+    width: 100%;
+    overflow: auto;
+    background-color: #FFC927;
+  }
+  form div[id^="su"] {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  #suform {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #firstandlast, #contactinfo, #passwordconfirmation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20%;
+  }
+  #su-confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 20px;
+  }
 }

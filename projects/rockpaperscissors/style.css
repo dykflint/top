@@ -1,0 +1,64 @@
+.game-container {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    justify-content: space-between;
+    gap: 25px;
+
+}
+.computer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.computer-choice {
+    width: 30%;
+    height: 200px;
+    background-color: grey;
+    border: none;
+    border-radius: 25px;
+}
+.player {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.rock, .paper, .scissors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 200px;
+    background-color: pink;
+    border-radius: 25px;
+    border: none;
+}
+.rock:hover, .paper:hover, .scissors:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+    cursor: pointer; 
+    background-color: rgb(222, 137, 151);
+}
+.rock:focus, .paper:focus, .scissors:focus {
+    background-color: green;
+    /* Add some comment */
+    /* Add another comment */
+}
+img {
+    width: 70%;
+    max-width: 150px;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="calc-container">
+    <div id="top">
+      <div id="result">0</div>
+    </div>
+    <div id="bottom">
+      <div id="numbers">
+       <div class="row">
+         <div>7</div>
+         <div>8</div>
+         <div>9</div>
+       </div>
+       <div class="row">
+         <div>4</div>
+         <div>5</div>
+         <div>6</div>
+       </div>
+       <div class="row">
+         <div>1</div>
+         <div>2</div>
+         <div>3</div>
+       </div>
+       <div>
+         <div id="clear" onclick="clearLog();">C</div>
+         <div class="row">
+          <div>0</div>
+         </div>
+         <div id="dot" onclick="addDot();">.</div>
+       </div>
+     </div>
+     <div id="operators">
+       <div id="add">+</div>
+       <div id="subtract">-</div>
+       <div id="multiply">*</div>
+       <div id="divide">/</div>
+       <div id="equal" onclick="calculate();">=</div>
+     </div>
+    </div>
+  </div> 
+</body>
+<script src="script.js"></script>
+</html>
